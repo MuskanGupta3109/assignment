@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link  rel="stylesheet" href="/css/itmlogin.css"> -->
+    <link href="/css/itmlogin.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+<style>
+    .m1{
+        background:darkslategrey ;
+    }
+    .m2{
+        background-color: black;
+        background-color: transparent;
+        /* opacity: 0.5; */
+        border: 2px solid black;
+       
+        box-shadow: 0 4px 8px 0 rgba(242, 248, 245, 0.978), 0 6px 20px 0 rgba(32, 35, 5, 0.8) !important;
+        background: linear-gradient(-69deg,#2f4f4f 11%,#ffffff 85%);
+    
+    }
+    .m3{
+        border-radius: 0px;
+    }
+    /* .m4{
+        border-radius: none;
+    } */
+    .m4{
+        border-radius: 0px !important;
+       background: transparent !important;
+       color: rgb(6, 11, 9) !important;
+       font-weight: 900;
+       border-top: none !important;
+       border-left: none !important;
+    
+       border-right: none !important;
+    }
+    
+</style>
+<body>
+    <section class="container-fluid text-center m1">
+        <% if(message.length> 0){ %>
+            <div class="alert alert-success">
+              <%= message %>
+            </div>
+            <% } %>
+            <% if(message1.length> 0){ %>
+                <div class="alert alert-danger">
+                  <%= message1 %>
+                </div>
+                <% } %>
+        <div class="row text-center m2">
+            <div class="col-md-6 text-center mt-5">
+                <img src="https://images.unsplash.com/photo-1529619768328-e37af76c6fe5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eSUyMG5pZ2h0fGVufDB8fDB8fA%3D%3D&w=1000&q=80" class="w-100"> 
+
+    
+            </div>
+           
+            <div class="col-md-6 mt-5">
+                <div class="row">
+                    <img src="images/Picture1.png">
+
+
+                </div>
+                <div class="row mt-5">
+                    <form method="post" action="/verify_login" enctype="multipart/form-data">
+                        
+                        <div class="form-group m3">
+                          <input type="text" name="email" class="form-control m4" placeholder="E-Mail">
+                        </div>
+                        <div class="form-group m3">
+                          <input type="passwpord" name="password" class="form-control m4" placeholder="Password">
+                        </div>
+                        
+                        
+                        <div class="form-group m3" style="text-align: initial;">
+                          <button class="btn btn-success">Login</button>
+                        </div>
+                        <!-- <a href="/" class="nav-link">Login</a> -->
+                        <div class="form-group m3 text-white" style="text-align:initial">If you are not register user please
+                            
+
+                        </div><a href="/Register" class="nav-link" style="width:fit-content;color: blue;
+                        border-bottom: 1px solid #ffffff;
+                        /* line-height: 1.4; */
+                        margin-bottom: 14px;">Register</a>
+                        
+                      </form>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<%- include('header.ejs') %>
+<div class="container mt-1 mb-3">
+    <div class="row">
+      <div class="col-md-12">
+        
+      </div>
+      <div class="col-md-12">
+        <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 mt-3 doubleBg shadow-lg p-4 rounded">
+        <center><h2 class="mb-5 headingText"><i class="fa-solid fa-list-ol"></i>Welcome to <%=b.studentName %></h2></center>
+        <div class="overflow-x auto">
+            <table class="table text-white bg-dark" id="myTable">
+<thead>
+<th>#</th>
+<th>studentname</th>
+<th>email</th>
+<th>Mobile</th>
+
+<th>course</th>
+<th>Adress</th>
+<th>Action</th>
+</thead>
+<% b.forEach((d)=>{  %>
+<tbody>
+    
+    <td>
+1
+</td>
+<td><%=d.studentName %></td>
+<td><%=d.email %></td>
+
+
+
+
+
+
+
+<td><%=d.Mobile %></td>
+<td><%=d.Course%></td>
+<td><%=d.address %></td>
+
+<td class="d-flex flex-nowrap gap-20px text-white">
+    <a href="" class="button-85 text-decoration-none">View</a>
+    <a href="" class="button-85 text-decoration-none">Edit</a>
+    <a href="" class="button-85 text-decoration-none">Delete</a></td>
+</tbody>
+<% })  %>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+        </div>
+    </div>
+       </div> 
+    </div>
+
+    <%- include('footer.ejs') %>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<style>
+    .c1{
+        background-image: url(https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/07/24200117/Class-11-Applications-of-Computers-in-Accounting.jpg);
+        background-size: cover;
+        /* height:100%; */
+        width:100%;
+        background-position: center;
+        /* background-size: cover; */
+        /* background-attachment: fixed; */
+        color:white;
+        padding-top: 102px;
+    }
+</style>
+<body>
+    <div class="container c1">
+        <div class="row text-dark">
+            <h1 class="text-center" style="text-transform: uppercase;"><strong>welcome to the course registration form </strong> </h1>
+            
+            <div class="col-md-6" style="background: #e6f5fa; opacity: 0.9;">
+           
+       
+                <form method="post" action="/studentinsert" enctype="multipart/form-data">
+                    <div class="form-group mt-3">
+                        <label>studentName:</label>
+                      <input type="text" name="studentName" class="form-control" placeholder="student Name" value="<%= n%>" required>
+                    </div>
+                    
+                   
+      
+      
+                    <div class="form-group mt-3">
+                        <label>Email:</label>
+                      <input type="text" name="email" class="form-control" value="<%= e%>" placeholder="E-Mail" required>
+                    </div>
+                    
+                    <div class="form-group mt-3">
+                        <label>Mobile:</label>
+                      <input type="text" name="Mobile" class="form-control" value="<%= m%>" placeholder="Mobile" required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label>select course:</label>
+                        <select class="form-control" name="Course">
+                            <option selected="">Select course</option>
+                            <option>MBA</option>
+                            <option>BTECH</option>
+    
+                            <option>MCA</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-3">
+                      <label>Select branch:</label>
+                      <select class="form-control" name="branch">
+                          <option selected="">Select branch</option>
+                          <option>IT</option>
+                          <option>CS</option>
+                          <option>ME</option>
+                          <option>CIVIL</option>
+                          <option>CA</option>
+                      </select>
+                  </div>
+
+
+                    <div class="form-group mt-3">
+                        <label>Adress:</label>
+                        <textarea name="address" class="form-control"></textarea>
+                    </div>
+                    <!-- <div class="col-md-9">
+                      <label>Photo of student:</label>
+                      <input type="file"  name="image" class="form-control" formControlName="image">
+                    </div> -->
+                    
+                    <div class="form-group">
+                      <button class="btn btn-success">Submit</button>
+                    </div>
+                  </form>
+
+            </div>
+            <div class="col-md-6 mt-5">
+                <!-- <h2 class="text-white">!</h2>
+                <p class="text-white">Once you're registered,you can:</p>
+                <p class="text-white">In case any Query,Kindly contact:700084682</p>
+                <hr class="text-white">
+                <img src="https://pninfosys.online/" class="w-100"> -->
+            </div>
+
+
+            
+        </div>
+
+    </div>
+</body>
+</html>

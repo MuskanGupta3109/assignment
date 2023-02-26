@@ -1,0 +1,54 @@
+<%- include('header.ejs') %>
+<div class="container mt-1 mb-3">
+    <div class="row">
+      <div class="col-md-12">
+        
+      </div>
+      <div class="col-md-12">
+        <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 mt-3 doubleBg shadow-lg p-4 rounded">
+        <center><h2 class="mb-5 headingText"><i class="fa-solid fa-list-ol"></i>Welcome to <%=d.FirstName %></h2></center>
+        <div class="overflow-x auto">
+            <table class="table text-white bg-dark" id="myTable">
+<thead>
+<th>#</th>
+<th>FirstName</th>
+<th>LastName</th>
+<th>Student Image</th>
+
+<th>Mobile</th>
+<th>Email</th>
+<th>Action</th>
+</thead>
+<tbody>
+    <td>
+1
+</td>
+<td><%=d.FirstName %></td>
+<td><%=d.LastName %></td>
+
+
+
+
+<td><img src="<%= d.image.url %>" width="300px">
+</td>
+
+<td><%=d.Mobile %></td>
+<td><%=d.email %></td>
+
+<td class="d-flex flex-nowrap gap-20px text-white">
+    <a href="" class="button-85 text-decoration-none">View</a>
+    <a href="" class="button-85 text-decoration-none">Edit</a>
+    <!-- <a href="" class="button-85 text-decoration-none">Delete</a></td> -->
+</tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+        </div>
+    </div>
+       </div> 
+    </div>
+
+    <%- include('footer.ejs') %>
